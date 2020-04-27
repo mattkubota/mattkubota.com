@@ -1,3 +1,41 @@
-.current {
-  color: green;
+/* NORMALIZE.CSS OVERRIDES */
+
+html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+/* MAIN */
+
+:root {
+  --font-size--small: calc((14/16) * 1rem); /* 14px */
+  --font-size--default: calc((16/16) * 1rem); /* 16px */
+  --font-size--large: calc((24/16) * 1rem); /* 24px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:visited {
+  color: #069;
+  text-decoration: none;
+}
+
+/* TYPOGRAPHY */
+.font-size--small {
+  font-size: var(--font-size--small);
+}
+
+.font-size--default {
+  font-size: var(--font-size--default);
+}
+
+.font-size--large {
+  font-size: var(--font-size--large);
 }

@@ -1,13 +1,24 @@
-/* NORMALIZE.CSS OVERRIDES */
-html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-  padding: 0
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: url(/assets/fonts/Inter-Regular.woff2) format('woff2');
 }
 
-p,a,h1,h2,h3,h4,h5,h6 {
+@font-face {
+  font-family: 'Inter';
+  font-weight: 800;
+  src: url(/assets/fonts/Inter-ExtraBold.woff2) format('woff2');
+}
+
+/* NORMALIZE.CSS OVERRIDES */
+html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6,a {
+  margin: 0;
+  padding: 0;
   font-size: 100%;
   font-weight: normal;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-feature-settings: "kern" 1, "ss02" 1, "calt" 1;
+  -webkit-font-feature-settings: "kern" 1, "ss02" 1, "calt" 1;
 }
 
 /* MAIN */
@@ -54,6 +65,7 @@ a:hover {
 }
 
 /* TYPOGRAPHY */
+
 .font-size--small {
   font-size: var(--font-size--small);
 }
@@ -69,6 +81,8 @@ a:hover {
 .font-size--xlarge {
   font-size: var(--font-size--xlarge);
   font-weight: 800;
+  letter-spacing: -0.022em; /* based on https://rsms.me/inter/dynmetrics/ */
+  line-height: 1.4em;
 }
 
 /* ANIMATIONS */

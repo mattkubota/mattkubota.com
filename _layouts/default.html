@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<!-- 
+ __                              __              
+/\ \                            /\ \             
+\ \ \___     ___   __  __  __   \_\ \  __  __    
+ \ \  _ `\  / __`\/\ \/\ \/\ \  /'_` \/\ \/\ \   
+  \ \ \ \ \/\ \L\ \ \ \_/ \_/ \/\ \L\ \ \ \_\ \  
+   \ \_\ \_\ \____/\ \___x___/'\ \___,_\/`____ \ 
+    \/_/\/_/\/___/  \/__//__/   \/__,_ /`/___/> \
+                                           /\___/
+                                           \/__/ 
+-->
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,12 +24,12 @@
     <meta charset="utf-8" />
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css"> -->
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
     {% seo %}
   </head>
-  <body>
+  <body class="grid-1">
     {% include nav.html %} {{ content }} {% include footer.html %}
   </body>
 </html>

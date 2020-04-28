@@ -2,7 +2,9 @@
 title: Matt Kubota
 ---
 
-<header></header>
+<header class="item-2">
+  <h1 class="font-size--xlarge">Matt Kubota is working on <a href="https://vocable.app" target="_blank" class="font-size--xlarge">Vocable AAC</a>.</h1>
+</header>
 
 <section></section>
 

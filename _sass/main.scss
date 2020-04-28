@@ -1,30 +1,56 @@
 /* NORMALIZE.CSS OVERRIDES */
-
 html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0
 }
 
-h1,h2,h3,h4,h5,h6 {
+p,a,h1,h2,h3,h4,h5,h6 {
   font-size: 100%;
-  font-weight: normal
+  font-weight: normal;
+  font-family: 'Inter', sans-serif;
 }
 
 /* MAIN */
-
 :root {
   --font-size--small: calc((14/16) * 1rem); /* 14px */
   --font-size--default: calc((16/16) * 1rem); /* 16px */
   --font-size--large: calc((24/16) * 1rem); /* 24px */
+  --font-size--xlarge: calc((72/16) * 1rem); /* 72px */
+}
+
+::selection {
+  background: #D3C8FE;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  background: #EBE5DF;
+}
+
+a {
+  cursor: ne-resize;
+}
+
 a, a:visited {
-  color: #069;
+  color: #009750;;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: white;
+  background: #009750;;
   text-decoration: none;
+}
+
+/* LAYOUT */
+.grid-1 {
+  display: grid;
+  grid-template-columns: 72px 72px 72px 72px 72px 72px 72px 72px 72px 72px 72px 72px;
+  grid-template-rows: 20% auto 20%;
+  grid-gap: calc((24/16) * 1rem); /* 24px */
 }
 
 /* TYPOGRAPHY */
@@ -38,4 +64,9 @@ a, a:visited {
 
 .font-size--large {
   font-size: var(--font-size--large);
+}
+
+.font-size--xlarge {
+  font-size: var(--font-size--xlarge);
+  font-weight: 800;
 }

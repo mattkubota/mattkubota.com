@@ -1,4 +1,2 @@
-- name: Item 1
-  link: /about/
-- name: Item 2
-  link: /blog/
+- name: Experiments
+  link: /experiments/

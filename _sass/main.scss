@@ -1,3 +1,12 @@
+// TODO: need flexbox to space out the footer elements
+// TODO: add hover external link icon?
+// TODO: add favicon
+// TODO: figure out how to make cdn work with vercel or github pages
+// TODO: figure out how to make vercel work with jekyll build settings
+// ? could I cancel hostgator just using jekyll and github pages or vercel?
+// ? adding an autoprefixer and minifier? https://github.com/envygeeks/jekyll-assets
+// ? how to add a locked page? https://github.com/matteobrusa/Password-protection-for-static-pages or https://github.com/lilykonings/jekyll-password-protect or https://auth0.com/docs/quickstart/spa/vanillajs
+
 @font-face {
   font-family: 'Inter';
   font-weight: 400;
@@ -51,17 +60,52 @@ a, a:visited {
 }
 
 a:hover {
-  color: white;
+  color: #EBE5DF;
   background: #085;;
   text-decoration: none;
 }
 
 /* LAYOUT */
+body {
+  height: 100vh;
+}
+
 .grid-1 {
   display: grid;
-  grid-template-columns: 72px 72px 72px 72px 72px 72px 72px 72px 72px 72px 72px 72px;
-  grid-template-rows: 20% auto 20%;
-  grid-gap: calc((24/16) * 1rem); /* 24px */
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 5vh 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 3fr 4fr 1fr;
+  grid-gap: calc((48/16) * 1rem); /* 48px */
+}
+
+.item-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+}
+
+.item-2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.item-3 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.item-4 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+.item-5 {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  align-self: end;
 }
 
 /* TYPOGRAPHY */

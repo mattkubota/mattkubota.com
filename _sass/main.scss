@@ -3,6 +3,14 @@
 // TODO: add favicon
 // TODO: figure out how to make cdn work with vercel or github pages
 // TODO: figure out how to make vercel work with jekyll build settings
+// TODO: make the experiments page
+// TODO: reduce html in the index.md file and put in layout file instead
+// TODO: add in breakpoints
+// TODO: add in animations
+// TODO: fix webmail access via gmail
+// IDEA: add list of favorite books, music, wikipedia article somewhere
+// IDEA: make a script that replaces dates with an event in history on the same day
+// ? can i replace fonts with inter-var?
 // ? could I cancel hostgator just using jekyll and github pages or vercel?
 // ? adding an autoprefixer and minifier? https://github.com/envygeeks/jekyll-assets
 // ? how to add a locked page? https://github.com/matteobrusa/Password-protection-for-static-pages or https://github.com/lilykonings/jekyll-password-protect or https://auth0.com/docs/quickstart/spa/vanillajs
@@ -28,13 +36,12 @@ html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,h
   font-family: 'Inter', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-feature-settings: "kern" 1, "ss02" 1, "calt" 1;
   -webkit-font-feature-settings: "kern" 1, "ss02" 1, "calt" 1;
+  color: #222;
 }
 
 /* MAIN */
 :root {
-  --font-size--small: calc((14/16) * 1rem); /* 14px */
-  --font-size--default: calc((16/16) * 1rem); /* 16px */
-  --font-size--large: calc((24/16) * 1rem); /* 24px */
+  --font-size--default: calc((18/16) * 1rem); /* 18px */
   --font-size--xlarge: calc((72/16) * 1rem); /* 72px */
 }
 
@@ -59,10 +66,14 @@ a, a:visited {
   text-decoration: underline;
 }
 
-a:hover {
+a:hover, a:focus {
   color: #EBE5DF;
   background: #085;;
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* LAYOUT */
@@ -102,24 +113,26 @@ body {
   grid-row-start: 3;
 }
 
+.item-2, .item-3, .item-4 {
+  width: 90%;
+}
+
 .item-5 {
+  display: flex;
+  justify-content: space-between;
   grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 4;
   align-self: end;
 }
 
 /* TYPOGRAPHY */
 
-.font-size--small {
-  font-size: var(--font-size--small);
-}
-
 .font-size--default {
   font-size: var(--font-size--default);
-}
-
-.font-size--large {
-  font-size: var(--font-size--large);
+  font-weight: 400;
+  letter-spacing: -0.011em; /* based on https://rsms.me/inter/dynmetrics/ */
+  line-height: 1.4em;
 }
 
 .font-size--xlarge {
@@ -129,4 +142,10 @@ body {
   line-height: 1.4em;
 }
 
+h2 {
+  margin-bottom: 1.4em;
+}
+
 /* ANIMATIONS */
+
+/* MEDIA QUERIES */

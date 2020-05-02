@@ -1,24 +1,22 @@
-// TODO: need flexbox to space out the footer elements
+// TODO: add more content to about
+// TODO: add colorful animation to background
 // TODO: add hover external link icon?
-// TODO: add favicon
 // TODO: figure out how to make cdn work with vercel or github pages
 // TODO: figure out how to make vercel work with jekyll build settings
 // TODO: make the experiments page
 // TODO: reduce html in the index.md file and put in layout file instead
-// TODO: add in breakpoints
-// TODO: add in animations
-// TODO: fix webmail access via gmail
 // IDEA: add list of favorite books, music, wikipedia article somewhere
 // IDEA: make a script that replaces dates with an event in history on the same day
 // ? can i replace fonts with inter-var?
 // ? could I cancel hostgator just using jekyll and github pages or vercel?
 // ? adding an autoprefixer and minifier? https://github.com/envygeeks/jekyll-assets
 // ? how to add a locked page? https://github.com/matteobrusa/Password-protection-for-static-pages or https://github.com/lilykonings/jekyll-password-protect or https://auth0.com/docs/quickstart/spa/vanillajs
+// ! commented out line 53 of /vendor/bundle/ruby/2.7.0/gems/jekyll-seo-tag-2.6.1/lib/jekyll-seo-tag/drop.rb to disable "title | description" in meta
 
 @font-face {
   font-family: 'Inter';
-  font-weight: 400;
-  src: url(/assets/fonts/Inter-Regular.woff2) format('woff2');
+  font-weight: 300;
+  src: url(/assets/fonts/Inter-Light.woff2) format('woff2');
 }
 
 @font-face {
@@ -32,16 +30,18 @@ html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,h
   margin: 0;
   padding: 0;
   font-size: 100%;
-  font-weight: normal;
+  font-weight: 300;
   font-family: 'Inter', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-feature-settings: "kern" 1, "ss02" 1, "calt" 1;
   -webkit-font-feature-settings: "kern" 1, "ss02" 1, "calt" 1;
+  line-height: 1.4em;
   color: #222;
 }
 
 /* MAIN */
 :root {
   --font-size--default: calc((18/16) * 1rem); /* 18px */
+  --font-size--large: calc((56/16) * 1rem); /* 56 */
   --font-size--xlarge: calc((72/16) * 1rem); /* 72px */
 }
 
@@ -62,13 +62,13 @@ a {
 }
 
 a, a:visited {
-  color: #085;;
+  color: #007549;;
   text-decoration: underline;
 }
 
 a:hover, a:focus {
   color: #EBE5DF;
-  background: #085;;
+  background: #007549;;
   text-decoration: none;
 }
 
@@ -77,13 +77,10 @@ ul {
 }
 
 /* LAYOUT */
-body {
-  height: 100vh;
-}
-
-.grid-1 {
+.grid {
   display: grid;
-  width: 80vw;
+  width: 90vw;
+  max-width: 100rem;
   height: 100vh;
   margin: 0 auto;
   padding: 5vh 0;
@@ -96,6 +93,7 @@ body {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 2;
+  align-self: center;
 }
 
 .item-2 {
@@ -127,19 +125,16 @@ body {
 }
 
 /* TYPOGRAPHY */
-
-.font-size--default {
-  font-size: var(--font-size--default);
-  font-weight: 400;
-  letter-spacing: -0.011em; /* based on https://rsms.me/inter/dynmetrics/ */
-  line-height: 1.4em;
-}
-
-.font-size--xlarge {
+h1, h1 a {
   font-size: var(--font-size--xlarge);
   font-weight: 800;
   letter-spacing: -0.022em; /* based on https://rsms.me/inter/dynmetrics/ */
-  line-height: 1.4em;
+}
+
+h2, a, p {
+  font-size: var(--font-size--default);
+  font-weight: 300;
+  letter-spacing: -0.011em; /* based on https://rsms.me/inter/dynmetrics/ */
 }
 
 h2 {
@@ -147,5 +142,57 @@ h2 {
 }
 
 /* ANIMATIONS */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header, section, footer {
+  animation: slideInFromTop 800ms ease-out 0s 1 backwards;
+}
+
+section {
+  animation-delay: 200ms;
+}
+
+footer {
+  animation-delay: 400ms;
+}
 
 /* MEDIA QUERIES */
+@media (max-width: 56rem) {
+  .grid {
+    grid-template-rows: 0fr 3fr auto auto auto 1fr;
+  }
+
+  .item-2 {
+    grid-row-start: 3;
+    grid-column-end: 4;
+  }
+  
+  .item-3 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  
+  .item-4 {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  
+  .item-5 {
+    grid-row-start: 6;
+  }
+
+  h1, h1 a {
+    font-size: var(--font-size--large);
+  }
+}

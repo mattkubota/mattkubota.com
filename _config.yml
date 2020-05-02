@@ -21,7 +21,8 @@
 title: Matt Kubota
 email: hi@mattkubota.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Who? What? When? Where? Why?
+  Matt Kubota is a product designer based in San Francisco, California, 
+  and deeply interested in emerging technology, accessibility, and social impact.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mattkubota.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: mattkubota

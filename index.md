@@ -12,7 +12,7 @@ title: Matt Kubota
   </section>
   <section class="item-3">
     <h2 class="font-size--default">Worked with <span aria-hidden="true">🧠</span></h2>
-    <p class="font-size--default">National Geographic, CBC, Waterpik, Anheuser-Busch, Regal, Vitality, Medicom Technologies</p>
+    <p class="font-size--default">National Geographic, CBC, Waterpik, Duke University, Anheuser-Busch, Regal, Vitality, Medicom Technologies</p>
   </section>
   <section class="item-4">
     <h2 class="font-size--default">Howdy <span aria-hidden="true">🤠</span></h2>

@@ -25,14 +25,13 @@ description: >- # this means to ignore newlines until "baseurl:"
   and deeply interested in emerging technology, accessibility, and social impact.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mattkubota.com" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: mattkubota
-# github_username:  mattkubota
+twitter_username: "mattkubota"
+github_username: "mattkubota"
 
 # Build settings
 theme: null
 plugins:
   - jekyll-sitemap
-  - jekyll-seo-tag
 
 # Default Layouts
 defaults:

@@ -247,7 +247,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll (~> 3.8.5)
-  jekyll-seo-tag
   jekyll-sitemap
   tzinfo (~> 1.2)
   tzinfo-data

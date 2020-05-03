@@ -26,7 +26,7 @@ title: Matt Kubota
     </ul>
   </section>
   <footer class="item-5">
-    <p>Coded by hand with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and typeset with <a href="https://rsms.me/inter/" target="_blank">Inter</a>. Last updated May 1, 2020.</p>
+    <p>Coded by hand with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and typeset with <a href="https://rsms.me/inter/" target="_blank">Inter</a>. Last updated May 2, 2020.</p>
     <!-- {% for item in site.data.navigation %}
       <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
         {{ item.name }}

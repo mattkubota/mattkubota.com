@@ -2,6 +2,11 @@
 title: Matt Kubota
 ---
 
+<div class="gradient-wrap">
+  <img src="/assets/images/gradient-1.png" class="gradient-1">
+  <img src="/assets/images/gradient-2.png" class="gradient-2">
+  <img src="/assets/images/gradient-3.png" class="gradient-3">
+</div>
 <main class="grid">
   <header class="item-1">
     <h1>Matt Kubota is working on <a href="https://vocable.app" target="_blank">Vocable AAC</a>.</h1>
@@ -11,7 +16,7 @@ title: Matt Kubota
     <p class="font-size--default">Hello! I'm a speaker and product designer that's worked on multi-platform digital products and emerging technology for many globally recognized companies. I'm deeply interested in R&D, assistive technology, interdisciplinary collaboration, and mission-driven innovation.</p>
   </section>
   <section class="item-3">
-    <h2 class="font-size--default">Worked with <span aria-hidden="true">🧠</span></h2>
+    <h2 class="font-size--default">Clients <span aria-hidden="true">🧠</span></h2>
     <p class="font-size--default">National Geographic, CBC, Waterpik, Anheuser-Busch, Duke University, Regal, Vitality, Medicom Technologies</p>
   </section>
   <section class="item-4">

@@ -232,10 +232,9 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  align-items: start;
   opacity: .4;
   filter: blur(16px);
-  padding-top: 5vh;
+  padding: 5vh 0 0 3rem;
 }
 
 .gradient-1, .gradient-2, .gradient-3 {
@@ -292,7 +291,6 @@ footer {
   }
 
   .gradient-wrap {
-    margin: initial;
     justify-content: center;
     padding-top: initial;
   }
@@ -300,5 +298,11 @@ footer {
   .gradient-1, .gradient-2, .gradient-3 {
     height: 30rem;
     width: 30rem;
+  }
+}
+
+@media (max-width: 47rem) {
+  .gradient-wrap {
+    margin-top: -7rem;
   }
 }

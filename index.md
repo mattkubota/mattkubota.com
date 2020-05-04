@@ -12,16 +12,16 @@ title: Matt Kubota
     <h1>Matt Kubota is working on <a href="https://vocable.app">Vocable AAC</a>.</h1>
   </header>
   <section class="item-2">
-    <h2 class="font-size--default">About <span aria-hidden="true">✌🏼</span></h2>
-    <p class="font-size--default">Hello! I'm a speaker and product designer that's worked on multi-platform digital products and emerging technology for many globally recognized companies. I'm deeply interested in accessibility, interdisciplinary collaboration, and social impact design. Currently looking for new opportunities—portfolio by request.</p>
+    <h2>About <span aria-hidden="true">✌🏼</span></h2>
+    <p>Hello! I'm a speaker and product designer that's worked on multi-platform digital products and emerging technology for many globally recognized companies. I'm deeply interested in accessibility, interdisciplinary collaboration, and social impact design. Currently looking for new opportunities—portfolio by request.</p>
   </section>
   <section class="item-3">
-    <h2 class="font-size--default">Clients <span aria-hidden="true">🧠</span></h2>
-    <p class="font-size--default">National Geographic, CBC, Waterpik, Anheuser-Busch, Duke University, Regal, Vitality, Medicom Technologies</p>
+    <h2>Clients <span aria-hidden="true">🧠</span></h2>
+    <p>National Geographic, CBC, Waterpik, Anheuser-Busch, Duke University, Regal, Vitality, Medicom Technologies</p>
   </section>
   <section class="item-4">
-    <h2 class="font-size--default">Howdy <span aria-hidden="true">🤠</span></h2>
-    <ul class="font-size--default">
+    <h2>Howdy <span aria-hidden="true">🤠</span></h2>
+    <ul>
       <li><a href="https://mattkubota.com/assets/files/resume.pdf" aria-label="PDF Resume">Resume</a></li>
       <li><a href="https://www.linkedin.com/in/mattkubota/" aria-label="LinkedIn Profile">LinkedIn</a></li>
       <li><a href="https://twitter.com/mattkubota" aria-label="Twitter Profile">Twitter</a></li>

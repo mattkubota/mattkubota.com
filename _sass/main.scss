@@ -137,7 +137,7 @@ h2 {
 }
 
 /* ANIMATIONS */
-@keyframes slideInFromTop {
+@keyframes loadInFromTop {
   from {
     transform: translateY(-1rem);
     opacity: 0;
@@ -153,7 +153,7 @@ h2 {
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: .75;
   }
 }
 
@@ -209,15 +209,15 @@ h2 {
 }
 
 header, section, footer {
-  animation: slideInFromTop 1s ease-out 0s 1 backwards;
+  animation: loadInFromTop 1s ease-out 200ms 1 backwards;
 }
 
 section {
-  animation-delay: 200ms;
+  animation-delay: 400ms;
 }
 
 footer {
-  animation-delay: 400ms;
+  animation-delay: 600ms;
 }
 
 .gradient-wrap {
@@ -245,15 +245,15 @@ footer {
 }
 
 .gradient-1 {
-  animation: spin-1 24s linear 0s infinite, spinLoadIn 2s ease-out 0s 1;
+  animation: spin-1 24s linear 200ms infinite, spinLoadIn 2s ease-out 0s 1;
 }
 
 .gradient-2 {
-  animation: spin-2 24s linear 0s infinite;
+  animation: spin-2 24s linear 3s infinite backwards;
 }
 
 .gradient-3 {
-  animation: spin-3 24s linear 0s infinite;
+  animation: spin-3 24s linear 6s infinite backwards;
 }
   
 /* MEDIA QUERIES */

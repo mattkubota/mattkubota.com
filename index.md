@@ -3,9 +3,9 @@ title: Matt Kubota
 ---
 
 <div class="gradient-wrap">
-  <img src="/assets/images/gradient-1.png" class="gradient-1">
-  <img src="/assets/images/gradient-2.png" class="gradient-2">
-  <img src="/assets/images/gradient-3.png" class="gradient-3">
+  <img src="/assets/images/gradient-1.png" aria-hidden="true" class="gradient-1">
+  <img src="/assets/images/gradient-2.png" aria-hidden="true" class="gradient-2">
+  <img src="/assets/images/gradient-3.png" aria-hidden="true" class="gradient-3">
 </div>
 <main class="grid">
   <header class="item-1">
@@ -22,11 +22,11 @@ title: Matt Kubota
   <section class="item-4">
     <h2 class="font-size--default">Howdy <span aria-hidden="true">🤠</span></h2>
     <ul class="font-size--default">
-      <li><a href="https://mattkubota.com/assets/files/resume.pdf" target="_blank">Resume</a></li>
-      <li><a href="https://www.linkedin.com/in/mattkubota/" target="_blank">LinkedIn</a></li>
-      <li><a href="https://twitter.com/mattkubota" target="_blank">Twitter</a></li>
-      <li><a href="https://github.com/mattkubota" target="_blank">GitHub</a></li>
-      <li><a href="https://open.spotify.com/playlist/2mv9IzC6od9rSVMfnPQl87?si=Drkmw4mhRpeEd27yunwbxw" target="_blank">Spotify</a></li>
+      <li><a href="https://mattkubota.com/assets/files/resume.pdf" aria-label="Resume PDF" target="_blank">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/mattkubota/" aria-label="LinkedIn Profile" target="_blank">LinkedIn</a></li>
+      <li><a href="https://twitter.com/mattkubota" aria-label="Twitter Profile" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/mattkubota" aria-label="GitHub Profile" target="_blank">GitHub</a></li>
+      <li><a href="https://open.spotify.com/playlist/2mv9IzC6od9rSVMfnPQl87?si=Drkmw4mhRpeEd27yunwbxw" aria-label="Spotify Playlist" target="_blank">Spotify</a></li>
       <br>
       <li><a href="mailto:hi@mattkubota.com" target="_blank">hi@mattkubota.com</a></li>
       <li><a href="tel:+1-804-971-0391">+1 804 971 0391</a></li>

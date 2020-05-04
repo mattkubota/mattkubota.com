@@ -34,6 +34,7 @@ html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,h
 
 /* MAIN */
 :root {
+  /* roughly based on major third type scale https://type-scale.com/ */
   --font-size--small: calc((14/16) * 1rem); /* 14px */
   --font-size--default: calc((18/16) * 1rem); /* 18px */
   --font-size--large: calc((48/16) * 1rem); /* 56 */

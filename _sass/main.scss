@@ -36,7 +36,7 @@ html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,h
 /* MAIN */
 :root {
   --font-size--default: calc((18/16) * 1rem); /* 18px */
-  --font-size--large: calc((56/16) * 1rem); /* 56 */
+  --font-size--large: calc((48/16) * 1rem); /* 56 */
   --font-size--xlarge: calc((72/16) * 1rem); /* 72px */
 }
 
@@ -223,20 +223,25 @@ footer {
 .gradient-wrap {
   position: absolute;
   z-index: -1;
+  overflow: hidden;
   display: flex;
-  height: 70vh;
   width: 100vw;
-  align-items: center;
-  justify-content: center;
+  max-width: 120rem;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: start;
   opacity: .4;
-  filter: blur(16px) brightness(100%);
+  filter: blur(16px);
+  padding-top: 5vh;
 }
 
 .gradient-1, .gradient-2, .gradient-3 {
   position: absolute;
   height: 50rem;
   width: 50rem;
-  left: 15%;
 }
 
 .gradient-1 {
@@ -286,7 +291,14 @@ footer {
     font-size: var(--font-size--large);
   }
 
+  .gradient-wrap {
+    margin: initial;
+    justify-content: center;
+    padding-top: initial;
+  }
+
   .gradient-1, .gradient-2, .gradient-3 {
-    left: initial;
+    height: 30rem;
+    width: 30rem;
   }
 }

@@ -13,7 +13,7 @@ title: Matt Kubota
   </header>
   <section class="item-2">
     <h2>About <span aria-hidden="true">✌🏼</span></h2>
-    <p>Hello! I'm a speaker and product designer that's worked on multi-platform digital products and emerging technology for many globally recognized companies. I'm deeply interested in accessibility, interdisciplinary collaboration, and social impact design. Currently looking for new opportunities—portfolio by request.</p>
+    <p>Hello! I'm a speaker and product designer that's worked on multi-platform digital products and emerging technology for many globally recognized companies. I'm deeply interested in accessibility, interdisciplinary collaboration, and social impact design. Previously at WillowTree and currently looking for new opportunities—portfolio by request.</p>
   </section>
   <section class="item-3">
     <h2>Clients <span aria-hidden="true">🧠</span></h2>

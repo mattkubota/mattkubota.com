@@ -1,13 +1,14 @@
 // TODO: add hover external link icon?
 // TODO: make the experiments page
 // TODO: reduce html in the index.md file and put in layout file instead
+// TODO: make a separate branch for the auth0 stuff
+// TODO: 404 beautify
+// TODO: end of animation has double amount of time before it starts again
 // IDEA: add list of favorite books, music, wikipedia article somewhere
 // IDEA: make a script that replaces dates with an event in history on the same day
 // ? can i replace fonts with inter-var?
 // ? could I cancel hostgator just using jekyll and github pages or vercel?
-// TODO: make a separate branch for the auth0 stuff
-// TODO: 404 beautify
-// TODO: end of animation has double amount of time before it starts again
+// ? should I make unit of type size vw instead of rem?
 
 @font-face {
   font-family: 'Inter';
@@ -38,6 +39,7 @@ html,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,h
   /* roughly based on major third type scale https://type-scale.com/ */
   --font-size--small: calc((14/16) * 1rem); /* 14px */
   --font-size--default: calc((18/16) * 1rem); /* 18px */
+  --font-size--medium: calc((30/16) * 1rem); /* 28px */
   --font-size--large: calc((48/16) * 1rem); /* 56 */
   --font-size--xlarge: calc((72/16) * 1rem); /* 72px */
 }
@@ -149,6 +151,10 @@ h1, h1 a {
   font-size: var(--font-size--xlarge);
   font-weight: 800;
   letter-spacing: -0.022em; /* based on https://rsms.me/inter/dynmetrics/ */
+}
+
+h1 a {
+  white-space: nowrap;
 }
 
 h2, a, p {
@@ -304,5 +310,12 @@ footer {
   .gradient-1, .gradient-2, .gradient-3 {
     height: 30rem;
     width: 30rem;
+  }
+}
+
+@media (max-width: 31rem) {
+  h1, h1 a {
+    font-size: var(--font-size--medium);
+    letter-spacing: -0.021em; /* based on https://rsms.me/inter/dynmetrics/ */
   }
 }

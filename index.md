@@ -20,7 +20,7 @@ title: Matt Kubota
   </section>
   <section class="item-3">
     <h2>Clients <span aria-hidden="true">🧠</span></h2>
-    <p>National Geographic, CBC, Waterpik, Anheuser-Busch, Duke University, Regal, Vitality, Medicom Technologies</p>
+    <p>National Geographic, CBC, Waterpik, Anheuser-Busch, Duke University, Regal, Vitality, Medicom Technologies, NC State University</p>
   </section>
   <section class="item-4">
     <h2>Howdy <span aria-hidden="true">🤠</span></h2>

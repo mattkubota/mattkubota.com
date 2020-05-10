@@ -136,7 +136,7 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .4;
+  opacity: .5;
   filter: blur(16px);
   padding: 8vh 0 0 3rem;
 }
@@ -145,6 +145,7 @@ ul {
   position: absolute;
   height: 50rem;
   width: 50rem;
+  mix-blend-mode: screen;
 }
 
 /* TYPOGRAPHY */
@@ -195,7 +196,7 @@ footer * {
 
 @keyframes spin-1 {
   0% {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
     opacity: 1;
   }
   33% {
@@ -205,14 +206,14 @@ footer * {
     opacity: 0;
   }
   100% {
-    transform:rotate(720deg);
+    transform: rotate(720deg);
     opacity: 1;
   }
 }
 
 @keyframes spin-2 {
   0% {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
     opacity: 0;
   }
   33% {
@@ -222,14 +223,14 @@ footer * {
     opacity: 0;
   }
   100% {
-  transform:rotate(720deg);
-  opacity: 0;
+    transform: rotate(720deg);
+    opacity: 0;
   }
 }
 
 @keyframes spin-3 {
   0% {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
     opacity: 0;
   }
   33% {
@@ -239,8 +240,8 @@ footer * {
     opacity: 1;
   }
   100% {
-  transform:rotate(720deg);
-  opacity: 0;
+    transform: rotate(720deg);
+    opacity: 0;
   }
 }
 
@@ -257,15 +258,15 @@ footer {
 }
 
 .gradient-1 {
-  animation: spin-1 20s linear 200ms infinite, spinLoadIn 2s ease-out 0s 1;
+  animation: spin-1 20s linear infinite, spinLoadIn 2s ease-out 1;
 }
 
 .gradient-2 {
-  animation: spin-2 20s linear 3s infinite backwards;
+  animation: spin-2 20s linear infinite backwards;
 }
 
 .gradient-3 {
-  animation: spin-3 20s linear 6s infinite backwards;
+  animation: spin-3 20s linear infinite backwards;
 }
   
 /* MEDIA QUERIES */

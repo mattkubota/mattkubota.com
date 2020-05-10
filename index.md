@@ -4,8 +4,8 @@ title: Matt Kubota
 
 <div class="gradient-wrap">
   <img src="/assets/images/gradient-1.png" aria-hidden="true" class="gradient-1">
-  <img src="/assets/images/gradient-2.png" aria-hidden="true" class="gradient-2">
-  <img src="/assets/images/gradient-3.png" aria-hidden="true" class="gradient-3">
+  <img src="/assets/images/gradient-2.png" aria-hidden="true" loading="lazy" class="gradient-2">
+  <img src="/assets/images/gradient-3.png" aria-hidden="true" loading="lazy" class="gradient-3">
 </div>
 <main class="grid">
   <header class="item-1">

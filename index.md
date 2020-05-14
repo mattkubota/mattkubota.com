@@ -13,7 +13,7 @@ title: Matt Kubota
   </header>
   <section class="item-2">
     <h2>About <span aria-hidden="true">✌🏼</span></h2>
-    <p>Hello! I'm a designer shaping technology into products that conduce equity, inclusion, and satisfaction. Innately a generalist, I pursue design and technology to tackle a range of diverse problems and to learn and be humbled by the rich insights of people across all walks of life. My goal for every project is to accurately capture ambiguity, measure a positive impact, and to always, always have fun.
+    <p>Hello! I'm a designer shaping technology into products that conduce equity, inclusion, and satisfaction. Innately a generalist, I pursue design and technology to tackle a range of diverse problems and to learn and be humbled by the rich insights of the people all around us. My goal for every project is to accurately capture ambiguity, measure a positive impact, and to always, always have fun.
     <br>
     <br>
     Previously at WillowTree and currently looking for new opportunities—portfolio by request.</p>
@@ -36,7 +36,7 @@ title: Matt Kubota
     </ul>
   </section>
   <footer class="item-5">
-    <p>Coded by hand with <a href="https://jekyllrb.com/">Jekyll</a> and typeset in <a href="https://rsms.me/inter/">Inter</a>. Last updated May 13, 2020.</p>
+    <p>Coded by hand with <a href="https://jekyllrb.com/">Jekyll</a> and typeset in <a href="https://rsms.me/inter/">Inter</a>. Last updated May 14, 2020.</p>
     <!-- {% for item in site.data.navigation %}
       <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
         {{ item.name }}

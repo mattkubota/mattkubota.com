@@ -148,6 +148,10 @@ ul {
   mix-blend-mode: screen;
 }
 
+.gradient-1 {
+  filter: brightness(115%);
+}
+
 /* TYPOGRAPHY */
 h1, h1 a {
   font-size: var(--font-size--xlarge);
@@ -270,6 +274,11 @@ footer {
 }
   
 /* MEDIA QUERIES */
+@media (max-width: 83rem) {
+  .grid {
+    grid-template-rows: 14rem auto auto auto auto;
+  }
+
 @media (max-width: 56rem) {
   .grid {
     grid-template-rows: 22rem auto auto auto auto;

@@ -364,10 +364,6 @@ a, a:visited {
     clip-path: none;
   }
 
-  #sticker:hover {
-    transform: none;
-  }
-
   #shine {
     display: none;
   }

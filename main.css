@@ -118,7 +118,7 @@ section {
   position: absolute;
   top: -40px;
   right: -55px;
-  transform: rotate(16deg);
+  transform: rotate(160deg);
   -webkit-clip-path: url(#sticker-shape);
   clip-path: url(#sticker-shape);
   overflow: hidden;

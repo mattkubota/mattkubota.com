@@ -355,3 +355,13 @@ a, a:visited {
     transform: rotate(16deg);
   }
 }
+
+@media (hover: none) {
+  #sticker {
+    clip-path: none;
+  }
+
+  #shine {
+    display: none;
+  }
+}

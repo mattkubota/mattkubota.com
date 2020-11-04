@@ -112,16 +112,13 @@ section {
   display: block;
 }
 
-#hero-container a {
-  transform: rotate(16deg);
-}
-
 #sticker {
   width: 180px;
   height: 103.96px; /* scaling is 1.731 */
   position: absolute;
   top: -40px;
   right: -55px;
+  transform: rotate(16deg);
   -webkit-clip-path: url(#sticker-shape);
   clip-path: url(#sticker-shape);
   overflow: hidden;
@@ -169,6 +166,10 @@ section {
 }
 
 /* GENERAL STYLING */
+.preload * {
+  transition: none;
+}
+
 ::selection {
   background: rgb(255, 221, 70);
 }

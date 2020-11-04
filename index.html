@@ -45,8 +45,14 @@
     <link rel="apple-touch-icon" href="assets/images/favicon-192x192.png">
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="main.css">
+    <!-- SCRIPTS -->
+    <script>
+      $(window).load(function() {
+        $("body").removeClass("preload");
+      });
+    </script>
   </head>
-  <body>
+  <body class="preload">
     <main>
       <section id="box-1">
         <header>

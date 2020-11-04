@@ -118,11 +118,11 @@ section {
   position: absolute;
   top: -40px;
   right: -55px;
-  transform: rotate(160deg);
+  transform: rotate(16deg);
   -webkit-clip-path: url(#sticker-shape);
   clip-path: url(#sticker-shape);
   overflow: hidden;
-  transition: 0.2s;
+  transition: 0s;
 }
 
 #sticker:hover {

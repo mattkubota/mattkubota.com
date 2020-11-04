@@ -1,0 +1,367 @@
+/*
+TODO optimize clip path animation for mobile
+TODO add case study pages
+*/
+
+/* FONTS */
+@font-face {
+  font-family: "Untitled Sans";
+  src: url('assets/fonts/Untitled_Sans_Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  src: url('assets/fonts/Untitled_Sans_Light.woff2') format('woff2');
+  font-weight: 300;
+}
+
+/* BASIC RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, blockquote, figure, pre, button, iframe, hr {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 300;
+  font-family: "Untitled Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.3em;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+/* LAYOUT */
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr auto;
+}
+
+section {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+#box-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  background-color: #E2DED7;
+}
+
+#box-2, #box-3--vocable, #box-4--waterpik, #box-5--natgeo {
+  justify-content: space-between;
+}
+
+#box-2 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  background-color: #157D4E;
+}
+
+#box-3--vocable {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  background-color: #8159D6;
+}
+
+#box-4--waterpik {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  background-color: #3257B5;
+}
+
+#box-5--natgeo {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  background-color: #E8BA45;
+}
+
+.btn {
+  width: max-content;
+  margin-top: 32px;
+  padding: 16px 24px;
+  border-radius: 5px;
+  font-size: var(--font-size--small);
+}
+
+#subhead {
+  max-width: 1020px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+#hero-container {
+  max-width: 950px;
+  height: auto;
+  position: relative;
+}
+
+#hero {
+  width: 100%;
+  display: block;
+}
+
+#sticker {
+  width: 180px;
+  height: 103.96px; /* scaling is 1.731 */
+  position: absolute;
+  top: -40px;
+  right: -55px;
+  transform: rotate(16deg);
+  -webkit-clip-path: url(#sticker-shape);
+  clip-path: url(#sticker-shape);
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+#sticker:hover {
+  transform: scale(1.2, 1.2) rotate(8deg);
+}
+
+#sticker img {
+  width: 100%;
+  position: absolute;
+}
+
+#shine {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: -190px;
+  transform: skewX(-30deg);
+  background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 0, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  animation: shine 2s infinite;
+}
+
+#bio, #contact {
+  max-width: 1500px;
+}
+
+#contact {
+  margin-top: 40px;
+}
+
+.project img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: block;
+}
+
+.project p {
+  max-width: 700px;
+  margin-top: 16px;
+}
+
+/* GENERAL STYLING */
+::selection {
+  background: rgb(255, 221, 70);
+}
+
+#bio a {
+  border-bottom: 4px solid rgb(255, 221, 70);
+}
+
+#contact a {
+  border-bottom: 2px solid rgb(255, 221, 70);
+}
+
+#box-2 a:hover {
+  background-color: rgb(255, 221, 70);
+  color: #157D4E;
+}
+
+.project a img {
+  transition: 0.2s;
+}
+
+.project a img:hover {
+  transform: translate(0px, -10px);
+}
+
+#box-3--vocable .btn {
+  background-color: rgba(92, 38, 155, 0.3);
+  transition: 0.2s;
+}
+
+#box-3--vocable .btn:hover {
+  background-color: rgba(92, 38, 155, 0.8);
+}
+
+#box-4--waterpik .btn {
+  background-color: rgba(39, 57, 160, 0.3);
+  transition: 0.2s;
+}
+
+#box-4--waterpik .btn:hover {
+  background-color: rgba(39, 57, 160, 0.8);
+}
+
+#box-5--natgeo .btn {
+  background-color: rgba(255, 224, 140, 0.6);
+  transition: 0.2s;
+}
+
+#box-5--natgeo .btn:hover {
+  background-color: rgba(255, 224, 140, 1);
+}
+
+/* TYPOGRAPHY */
+:root {
+  /* based on major third type scale https://type-scale.com/ */
+  --font-size--small: calc((20/16) * 1rem); /* 20px */
+  --font-size--default: calc((25/16) * 1rem); /* 25px */
+  --font-size--medium: calc((31.25/16) * 1rem); /* 31.25px */
+  --font-size--large: calc((39.06/16) * 1rem); /* 39.06px */
+  --font-size--xlarge: calc((48.83/16) * 1rem); /* 48.83px */
+}
+
+h1, h2 {
+  font-size: var(--font-size--medium);
+  font-weight: 700;
+  color: white;
+}
+
+p {
+  font-size: var(--font-size--default);
+  color: white;
+}
+
+a, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#name, #subhead {
+  color: #222;
+}
+
+#bio, #bio a {
+  font-size: var(--font-size--large);
+  font-weight: 700;
+}
+
+#box-5--natgeo h2, #box-5--natgeo p, #box-5--natgeo .btn{
+  color: #222;
+}
+
+/* ANIMATIONS */
+@keyframes shine {
+  0% { left: -290px; }
+  100% { left: 290px; }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1800px) {
+  #bio, #bio a {
+    font-size: var(--font-size--large);
+  }
+}
+
+@media (max-width: 1400px) {
+  #bio, #bio a {
+    font-size: var(--font-size--medium);
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+
+  #box-1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    overflow: hidden;
+  }
+
+  #box-2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  #box-3--vocable {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  #box-4--waterpik {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+
+  #box-5--natgeo {
+    grid-column-start: 1;
+    grid-row-start: 5;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+
+  #box-3--vocable .btn {
+    background-color: rgba(92, 38, 155, 0.6);
+    transition: 0.2s;
+  }
+  
+  #box-4--waterpik .btn {
+    background-color: rgba(39, 57, 160, 0.6);
+    transition: 0.2s;
+  }
+  
+  #box-5--natgeo .btn {
+    background-color: rgba(255, 224, 140, 0.8);
+    transition: 0.2s;
+  }
+
+  p {
+    font-size: var(--font-size--small);
+  }
+
+  #subhead {
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+
+  #bio, #bio a {
+    font-size: var(--font-size--default);
+  }
+
+  #bio a {
+    border-bottom: 2px solid rgb(255, 221, 70);
+  }
+
+  #sticker {
+    width: 160px;
+    height: 92.43px; /* scaling is 1.731 */
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    transform: rotate(16deg);
+  }
+}
+
+@media (hover: none) {
+  #sticker {
+    clip-path: none;
+  }
+
+  #shine {
+    display: none;
+  }
+}

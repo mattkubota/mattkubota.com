@@ -341,7 +341,7 @@ a, a:visited {
   }
 
   #bio, #bio a {
-    font-size: var(--font-size--default);
+    font-size: var(--font-size--small);
   }
 
   #bio a {

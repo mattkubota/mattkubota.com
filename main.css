@@ -49,7 +49,7 @@ section {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
-  background-color: #E2DED7;
+  background-color: #e2ded7;
 }
 
 #box-2, #box-3--vocable, #box-4--waterpik, #box-5--natgeo {
@@ -60,28 +60,28 @@ section {
   grid-column-start: 4;
   grid-column-end: 7;
   grid-row-start: 1;
-  background-color: #157D4E;
+  background-color: #157d4e;
 }
 
 #box-3--vocable {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
-  background-color: #8159D6;
+  background-color: #6f42d1;
 }
 
 #box-4--waterpik {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 2;
-  background-color: #3257B5;
+  background-color: #3257b5;
 }
 
 #box-5--natgeo {
   grid-column-start: 5;
   grid-column-end: 7;
   grid-row-start: 2;
-  background-color: #E8BA45;
+  background-color: #eab33a;
 }
 
 .btn {
@@ -182,7 +182,7 @@ section {
 
 #box-2 a:hover {
   background-color: rgb(255, 221, 70);
-  color: #157D4E;
+  color: #157d4e;
 }
 
 .project a img {
@@ -233,16 +233,16 @@ section {
 h1, h2 {
   font-size: var(--font-size--medium);
   font-weight: 700;
-  color: white;
+  color: #fff;
 }
 
 p {
   font-size: var(--font-size--default);
-  color: white;
+  color: #fff;
 }
 
 a, a:visited {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 

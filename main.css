@@ -100,14 +100,15 @@ section {
 
 #hero-container {
   max-width: 1200px;
-  height: auto;
+  height: 100%;
   position: relative;
 }
 
 #hero {
   width: 100%;
-  height: auto;
+  height: inherit;
   display: block;
+  object-fit: cover;
 }
 
 #sticker {

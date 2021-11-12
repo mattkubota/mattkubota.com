@@ -224,12 +224,12 @@ section {
 
 /* TYPOGRAPHY */
 :root {
-  /* based on major third type scale https://type-scale.com/ */
-  --font-size--small: calc((20/16) * 1rem); /* 20px */
-  --font-size--default: calc((25/16) * 1rem); /* 25px */
-  --font-size--medium: calc((31.25/16) * 1rem); /* 31.25px */
-  --font-size--large: calc((39.06/16) * 1rem); /* 39.06px */
-  --font-size--xlarge: calc((48.83/16) * 1rem); /* 48.83px */
+  /* based on minor third type scale https://type-scale.com/ */
+  --font-size--small: calc((19.2/16) * 1rem); /* 19.2px */
+  --font-size--default: calc((23.04/16) * 1rem); /* 23.04px */
+  --font-size--medium: calc((27.65/16) * 1rem); /* 27.65px */
+  --font-size--large: calc((33.18/16) * 1rem); /* 33.18px */
+  --font-size--xlarge: calc((39.81/16) * 1rem); /* 39.81px */
 }
 
 h1, h2 {
@@ -253,7 +253,7 @@ a, a:visited {
 }
 
 #bio, #bio a {
-  font-size: var(--font-size--large);
+  font-size: var(--font-size--xlarge);
   font-weight: 700;
 }
 
@@ -335,6 +335,7 @@ a, a:visited {
 
   p {
     font-size: var(--font-size--small);
+    line-height: 1.4em;
   }
 
   #subhead {

@@ -383,4 +383,8 @@ a, a:visited {
   #sticker:hover {
     transform: scale(1, 1) rotate(16deg);;
   }
+
+  .project a img:hover {
+    transform: none;
+  }
 }

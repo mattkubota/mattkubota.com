@@ -179,10 +179,6 @@ section {
 }
 
 /* GENERAL STYLING */
-.preload * {
-  transition: none;
-}
-
 ::selection {
   background: rgb(255, 221, 70);
 }
@@ -201,7 +197,7 @@ section {
 }
 
 .project a img {
-  transition: 0.2s;
+  transition: 3.2s;
 }
 
 .project a img:hover {

@@ -106,7 +106,7 @@ section {
 }
 
 #hero {
-  width: 100%;
+  max-width: 100%;
   height: inherit;
   display: block;
   object-fit: cover;
@@ -165,11 +165,18 @@ section {
   margin-top: 40px;
 }
 
-.project img {
-  width: 100%;
+#img-container {
   max-width: 500px;
   height: auto;
   margin: auto;
+  display: block;
+}
+
+.project img {
+  max-width: 100%;
+  /* max-width: 500px; */
+  height: auto;
+  /* margin: auto; */
   display: block;
 }
 

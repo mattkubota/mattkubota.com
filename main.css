@@ -376,14 +376,11 @@ a, a:visited {
 
 @media (hover: none) {
   #sticker-container:hover {
+    transform: scale(1, 1) rotate(16deg);;
     filter: none;
   }
 
-  #sticker:hover {
-    transform: scale(1, 1) rotate(16deg);;
-  }
-
-  .project a img:hover {
+  #img-container:hover {
     transform: none;
   }
 }

@@ -95,7 +95,7 @@ section {
 
 #subhead {
   max-width: 1020px;
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 32px;
 }
 
@@ -352,7 +352,6 @@ a, a:visited {
   }
 
   #subhead {
-    margin-top: 8px;
     margin-bottom: 24px;
   }
 

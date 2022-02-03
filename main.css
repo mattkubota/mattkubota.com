@@ -23,7 +23,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, blockquote, figure, pre, b
   padding: 0;
   font-size: 100%;
   font-weight: 300;
-  font-family: "Untitled Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.3em;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;

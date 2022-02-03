@@ -4,6 +4,7 @@
   src: url('assets/fonts/Untitled_Sans_Bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
+  unicode-range: U+000-5FF; /* Latin glyphs */
 }
 
 @font-face {
@@ -26,6 +27,9 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, blockquote, figure, pre, b
   font-family: "Untitled Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.3em;
   -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
 }
 
 ul, ol {

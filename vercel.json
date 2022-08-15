@@ -1,0 +1,13 @@
+{
+    "headers":[
+      {
+        "source": "assets/files/matt-kubota_resume.pdf",
+        "headers" : [
+          {
+            "key" : "x-robots-tag",
+            "value" : "noindex"
+          }
+        ]
+      }
+    ]
+  }

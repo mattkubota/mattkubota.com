@@ -365,6 +365,10 @@ a, a:visited {
   #bio, #bio a {
     font-size: var(--font-size--small);
   }
+
+  section {
+    padding: 24px;
+  }
 }
 
 @media (hover: none) {

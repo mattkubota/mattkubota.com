@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /assets/files/matt-kubota_resume.pdf

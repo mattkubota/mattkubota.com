@@ -241,6 +241,7 @@ h1, h2 {
 p {
   font-size: var(--font-size--default);
   color: #fff;
+  text-wrap: pretty;
 }
 
 a, a:visited {
@@ -255,7 +256,6 @@ a, a:visited {
 #bio, #bio a {
   font-size: var(--font-size--xlarge);
   font-weight: 700;
-  text-wrap: pretty;
 }
 
 #box-5--natgeo h2, #box-5--natgeo p, #box-5--natgeo .btn{
@@ -283,6 +283,10 @@ a, a:visited {
 }
 
 @media (max-width: 1000px) {
+  body {
+    background-color: #e2ded7;
+  }
+  
   main {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);

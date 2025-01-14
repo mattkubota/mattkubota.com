@@ -45,20 +45,21 @@ ol {
 /* CUSTOM PROPERTIES */
 :root {
   /* Colors */
-  --color-text-dark: #222;
-  --color-text-light: #fff;
-  --color-bg-cream: #e2ded7;
-  --color-bg-green: #157d4e;
-  --color-bg-purple: #6f42d1;
-  --color-bg-blue: #3257b5;
-  --color-bg-yellow: #eab33a;
-  --color-highlight: rgb(255, 221, 70);
-  --color-purple-transparent: rgba(92, 38, 155, 0.3);
-  --color-purple-transparent-hover: rgba(92, 38, 155, 0.8);
-  --color-blue-transparent: rgba(39, 57, 160, 0.3);
-  --color-blue-transparent-hover: rgba(39, 57, 160, 0.8);
-  --color-yellow-transparent: rgba(255, 224, 140, 0.6);
-  --color-yellow-transparent-hover: rgba(255, 224, 140, 1);
+  --color-text-dark: rgb(34, 34, 34); /* #222222 */
+  --color-text-light: rgb(255, 255, 255); /* #ffffff */
+  --color-bg-cream: rgb(226, 222, 215); /* #e2ded7 */
+  --color-bg-green: rgb(21, 125, 78); /* #157d4e */
+  --color-bg-purple: rgb(111, 66, 209); /* #6f42d1 */
+  --color-bg-blue: rgb(50, 87, 181); /* #3257b5 */
+  --color-bg-yellow: rgb(234, 179, 58); /* #eab33a */
+  --color-highlight: rgb(255, 221, 70); /* #ffdd46 */
+  --color-purple-transparent: rgb(92, 38, 155, 0.3);
+  --color-purple-transparent-hover: rgb(92, 38, 155, 0.8);
+  --color-blue-transparent: rgb(39, 57, 160, 0.3);
+  --color-blue-transparent-hover: rgb(39, 57, 160, 0.8);
+  --color-yellow-transparent: rgb(255, 224, 140, 0.6);
+  --color-yellow-transparent-hover: rgb(255, 224, 140);
+  --shadow: rgb(0, 8, 30, 0.3);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -66,12 +67,6 @@ ol {
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 2.5rem;
-
-  /* Breakpoints - for reference only (cannot be used in @media queries) */
-  --breakpoint-mobile: 425px;
-  --breakpoint-tablet: 1000px;
-  --breakpoint-laptop: 1400px;
-  --breakpoint-desktop: 1800px;
 
   /* Typography - based on minor third type scale https://type-scale.com/ */
   --font-size--small: calc((19.2 / 16) * 1rem); /* 19.2px */
@@ -172,7 +167,7 @@ section {
   right: -55px;
   transform: rotate(16deg);
   transition-duration: 0.2s;
-  filter: drop-shadow(0px 0px 0px rgba(0, 8, 30, 0.3));
+  filter: drop-shadow(0px 0px 0px var(--shadow));
 }
 
 #sticker {
@@ -191,7 +186,7 @@ section {
 }
 
 #sticker-container:hover {
-  filter: drop-shadow(0px 10px 5px rgba(0, 8, 30, 0.3));
+  filter: drop-shadow(0px 10px 5px var(--shadow));
   transform: scale(1.2, 1.2) rotate(8deg);
 }
 
@@ -420,7 +415,7 @@ a:visited {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: max-width: 1800px) {
+@media (max-width: 1800px) {
   #bio,
   #bio a {
     font-size: var(--font-size--large);

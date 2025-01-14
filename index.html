@@ -118,7 +118,7 @@
           stressful situations easier for drivers. I'm also the founder of
           <a href="https://www.vocable.app/">Vocable AAC</a>, an app that
           enables people with limited speech to communicate using
-          <a href="https://twitter.com/mattkubota/status/1240012092595412992"
+          <a href="https://x.com/mattkubota/status/1240012092595412992"
             >head movements</a
           >. Previously, I connected hungry diners with local restaurants at
           <a href="https://www.grubhub.com/">Grubhub</a> and cut my teeth
@@ -171,11 +171,13 @@
           if you want that too.
         </p>
       </section>
-      <section class="project" id="box-3--vocable">
-        <div>
-          <a
-            href="https://www.notion.so/mattkubota/Vocable-AAC-3dc6c774aebd4692b6838ddd8106c678"
-          >
+      <section class="project" id="box-3--vocable" tabindex="0">
+        <a
+          href="https://www.notion.so/mattkubota/Vocable-AAC-3dc6c774aebd4692b6838ddd8106c678"
+          class="project-content"
+          tabindex="-1"
+        >
+          <div>
             <div id="img-container">
               <img
                 src="assets/images/vocable.webp"
@@ -185,26 +187,23 @@
                 loading="lazy"
               />
             </div>
-          </a>
-          <h2>Vocable AAC</h2>
-          <p>
-            Allowing those with conditions that restrict or inhibit speech to
-            communicate with their caregivers and loved ones with an app that
-            uses AR to track head movements.
-          </p>
-        </div>
-        <a
-          href="https://www.notion.so/mattkubota/Vocable-AAC-3dc6c774aebd4692b6838ddd8106c678"
-          class="btn"
-          aria-label="View project"
-          >View project →</a
-        >
+            <h2>Vocable AAC</h2>
+            <p>
+              Allowing those with conditions that restrict or inhibit speech to
+              communicate with their caregivers and loved ones with an app that
+              uses AR to track head movements.
+            </p>
+          </div>
+          <span class="btn" aria-hidden="true">View project →</span>
+        </a>
       </section>
-      <section class="project" id="box-4--waterpik">
-        <div>
-          <a
-            href="https://www.notion.so/mattkubota/Waterpik-397cb98060af45f89343ba38671555d3"
-          >
+      <section class="project" id="box-4--waterpik" tabindex="0">
+        <a
+          href="https://www.notion.so/mattkubota/Waterpik-397cb98060af45f89343ba38671555d3"
+          class="project-content"
+          tabindex="-1"
+        >
+          <div>
             <div id="img-container">
               <img
                 src="assets/images/waterpik.webp"
@@ -214,26 +213,23 @@
                 loading="lazy"
               />
             </div>
-          </a>
-          <h2>Waterpik 14-Day Challenge</h2>
-          <p>
-            Encouraging Waterpik users to get into the habit of flossing daily
-            with a focused, gamified experience that takes them through the
-            first two weeks of use.
-          </p>
-        </div>
-        <a
-          href="https://www.notion.so/mattkubota/Waterpik-397cb98060af45f89343ba38671555d3"
-          class="btn"
-          aria-label="View project"
-          >View project →</a
-        >
+            <h2>Waterpik 14-Day Challenge</h2>
+            <p>
+              Encouraging Waterpik users to get into the habit of flossing daily
+              with a focused, gamified experience that takes them through the
+              first two weeks of use.
+            </p>
+          </div>
+          <span class="btn" aria-hidden="true">View project →</span>
+        </a>
       </section>
-      <section class="project" id="box-5--natgeo">
-        <div>
-          <a
-            href="https://www.notion.so/mattkubota/National-Geographic-9876b6b0abce4806b0584fafaabd3566"
-          >
+      <section class="project" id="box-5--natgeo" tabindex="0">
+        <a
+          href="https://www.notion.so/mattkubota/National-Geographic-9876b6b0abce4806b0584fafaabd3566"
+          class="project-content"
+          tabindex="-1"
+        >
+          <div>
             <div id="img-container">
               <img
                 src="assets/images/natgeo.webp"
@@ -243,20 +239,15 @@
                 loading="lazy"
               />
             </div>
-          </a>
-          <h2>National Geographic</h2>
-          <p>
-            Providing the everyday explorer a personalized feed of photography,
-            video, AR, and articles about the natural world in this
-            award-winning mobile app.
-          </p>
-        </div>
-        <a
-          href="https://www.notion.so/mattkubota/National-Geographic-9876b6b0abce4806b0584fafaabd3566"
-          class="btn"
-          aria-label="View project"
-          >View project →</a
-        >
+            <h2>National Geographic</h2>
+            <p>
+              Providing the everyday explorer a personalized feed of
+              photography, video, AR, and articles about the natural world in
+              this award-winning mobile app.
+            </p>
+          </div>
+          <span class="btn" aria-hidden="true">View project →</span>
+        </a>
       </section>
     </main>
 
@@ -277,9 +268,7 @@
       }
     </svg>
     <span>${
-      isError
-        ? "Failed to copy email address"
-        : "Email address copied"
+      isError ? "Failed to copy email address" : "Email address copied"
     }</span>
   `;
         toastContainer.appendChild(toast);

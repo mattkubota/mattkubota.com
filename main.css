@@ -80,23 +80,17 @@ ol {
 main {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr auto;
+  grid-template: 1fr auto / repeat(6, 1fr);
 }
 
+/* Common section styles */
 section {
   padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
 }
 
-#box-1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  background-color: var(--color-bg-cream);
-}
-
+/* Shared section layouts */
 #box-2,
 #box-3--vocable,
 #box-4--waterpik,
@@ -104,31 +98,29 @@ section {
   justify-content: space-between;
 }
 
-#box-2 {
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 1;
+/* Grid Areas */
+#box-1 { 
+  grid-area: 1 / 1 / 2 / 4;
+  background-color: var(--color-bg-cream);
+}
+
+#box-2 { 
+  grid-area: 1 / 4 / 2 / 7;
   background-color: var(--color-bg-green);
 }
 
-#box-3--vocable {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
+#box-3--vocable { 
+  grid-area: 2 / 1 / 3 / 3;
   background-color: var(--color-bg-purple);
 }
 
-#box-4--waterpik {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 2;
+#box-4--waterpik { 
+  grid-area: 2 / 3 / 3 / 5;
   background-color: var(--color-bg-blue);
 }
 
-#box-5--natgeo {
-  grid-column-start: 5;
-  grid-column-end: 7;
-  grid-row-start: 2;
+#box-5--natgeo { 
+  grid-area: 2 / 5 / 3 / 7;
   background-color: var(--color-bg-yellow);
 }
 
@@ -161,35 +153,35 @@ section {
 
 #sticker-container {
   width: 180px;
-  height: 103.96px; /* scaling is 1.731 */
+  height: 103.96px;
   position: absolute;
   top: -40px;
   right: -55px;
   transform: rotate(16deg);
-  transition-duration: 0.2s;
-  filter: drop-shadow(0px 0px 0px var(--shadow));
+  transition: all 0.2s;
+  filter: drop-shadow(0 0 0 var(--color-shadow));
+  will-change: transform, filter;
 }
 
 #sticker {
   width: inherit;
   height: inherit;
   position: inherit;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
+  overflow: hidden;
   -webkit-clip-path: path(
     "M97.6,0,95.2,5.05,90,16,84.82,5.05,82.43,0,80.54,5.26,76.45,16.64,70.18,6.3,67.26,1.49,65.94,7,63.07,18.74,55.65,9.15l-3.5-4.51-.65,5.65L50.09,22.42l-8.71-8.53L37.16,9.78l.26,5.88L38,28,27.63,21.17l-5.25-3.49,1.73,6.05L27.58,36,15.34,32.47,8.19,30.41l4.71,5.77,8.35,10.2L8.52,49.74,0,52l8.52,2.25,12.73,3.36L12.9,67.79,8.19,73.56l7.15-2.06L27.58,68,24.1,80.22l-1.72,6.07,5.25-3.48L38,76l-.53,12.38-.26,5.87,4.22-4.14,8.73-8.54,1.41,12.13.66,5.66,3.49-4.52,7.43-9.59L66,97l1.33,5.48,2.92-4.82,6.24-10.3,4.09,11.37L82.43,104l2.39-5L90,88l5.18,10.9,2.42,5,1.89-5.26,4.07-11.36,6.27,10.33,2.92,4.82L114.08,97l2.86-11.8,7.42,9.59,3.5,4.51.65-5.66,1.42-12.13,8.73,8.55,4.21,4.11-.26-5.88L142.08,76l10.34,6.85,5.21,3.49-1.73-6.05L152.42,68l12.24,3.51,7.15,2-4.71-5.76-8.34-10.2,12.73-3.36L180,52l-8.52-2.24-12.73-3.36,8.35-10.2,4.71-5.77-7.14,2.05L152.42,36l3.48-12.23,1.73-6.09-5.25,3.48L142.06,28l.53-12.38.26-5.87-4.21,4.12-8.73,8.55-1.42-12.13-.65-5.66-3.5,4.52-7.4,9.57L114.07,7l-1.32-5.47L109.82,6.3l-6.26,10.34L99.47,5.26Z"
   );
   clip-path: path(
     "M97.6,0,95.2,5.05,90,16,84.82,5.05,82.43,0,80.54,5.26,76.45,16.64,70.18,6.3,67.26,1.49,65.94,7,63.07,18.74,55.65,9.15l-3.5-4.51-.65,5.65L50.09,22.42l-8.71-8.53L37.16,9.78l.26,5.88L38,28,27.63,21.17l-5.25-3.49,1.73,6.05L27.58,36,15.34,32.47,8.19,30.41l4.71,5.77,8.35,10.2L8.52,49.74,0,52l8.52,2.25,12.73,3.36L12.9,67.79,8.19,73.56l7.15-2.06L27.58,68,24.1,80.22l-1.72,6.07,5.25-3.48L38,76l-.53,12.38-.26,5.87,4.22-4.14,8.73-8.54,1.41,12.13.66,5.66,3.49-4.52,7.43-9.59L66,97l1.33,5.48,2.92-4.82,6.24-10.3,4.09,11.37L82.43,104l2.39-5L90,88l5.18,10.9,2.42,5,1.89-5.26,4.07-11.36,6.27,10.33,2.92,4.82L114.08,97l2.86-11.8,7.42,9.59,3.5,4.51.65-5.66,1.42-12.13,8.73,8.55,4.21,4.11-.26-5.88L142.08,76l10.34,6.85,5.21,3.49-1.73-6.05L152.42,68l12.24,3.51,7.15,2-4.71-5.76-8.34-10.2,12.73-3.36L180,52l-8.52-2.24-12.73-3.36,8.35-10.2,4.71-5.77-7.14,2.05L152.42,36l3.48-12.23,1.73-6.09-5.25,3.48L142.06,28l.53-12.38.26-5.87-4.21,4.12-8.73,8.55-1.42-12.13-.65-5.66-3.5,4.52-7.4,9.57L114.07,7l-1.32-5.47L109.82,6.3l-6.26,10.34L99.47,5.26Z"
   );
-  overflow: hidden;
 }
 
 #sticker-container:hover {
-  filter: drop-shadow(0px 10px 5px var(--shadow));
-  transform: scale(1.2, 1.2) rotate(8deg);
+  filter: drop-shadow(0 10px 5px var(--color-shadow));
+  transform: scale(1.2) rotate(8deg);
 }
-
 #sticker img {
   width: 100%;
   position: absolute;
@@ -199,18 +191,18 @@ section {
   width: 60%;
   height: 100%;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -190px;
   transform: skewX(-30deg);
-  background-image: -webkit-linear-gradient(
-    left,
-    rgba(255, 255, 255, 0) 0,
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
     rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 100%
+    transparent 100%
   );
   animation: shine 6s ease-in infinite;
+  will-change: left;
 }
-
 #bio,
 #contact {
   max-width: 1500px;
@@ -290,6 +282,7 @@ section {
   height: auto;
   margin: auto;
   display: block;
+  transition-duration: 0.2s;
 }
 
 .project img {
@@ -298,7 +291,8 @@ section {
   display: block;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .project img.in-view {
@@ -330,11 +324,14 @@ section {
 }
 
 #img-container {
-  transition-duration: 0.2s;
+  transition: transform 0.2s ease;
 }
 
 #img-container:hover {
-  transform: translate(0px, -10px);
+  transform: translate3d(0, -10px, 0);
+}
+.btn {
+  transition: background-color 0.2s ease;
 }
 
 #box-3--vocable .btn {
@@ -406,15 +403,13 @@ a:visited {
   0% {
     left: -290px;
   }
-  33% {
-    left: 290px;
-  }
-  100% {
+  33%, 100% {
     left: 290px;
   }
 }
 
 /* MEDIA QUERIES */
+/* Desktop-first breakpoints */
 @media (max-width: 1800px) {
   #bio,
   #bio a {
@@ -430,6 +425,7 @@ a:visited {
 }
 
 @media (max-width: 1000px) {
+  /* Layout changes */
   body {
     background-color: var(--color-bg-cream);
   }
@@ -439,32 +435,25 @@ a:visited {
     grid-template-rows: repeat(5, auto);
   }
 
-  #box-1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
+  /* Grid adjustments */
+  #box-1,
+  #box-2,
+  #box-3--vocable,
+  #box-4--waterpik,
+  #box-5--natgeo {
+    grid-column: 1;
+  }
+
+  #box-1 { 
+    grid-row: 1; 
     overflow: hidden;
   }
+  #box-2 { grid-row: 2; }
+  #box-3--vocable { grid-row: 3; }
+  #box-4--waterpik { grid-row: 4; }
+  #box-5--natgeo { grid-row: 5; }
 
-  #box-2 {
-    grid-column-start: 1;
-    grid-row-start: 2;
-  }
-
-  #box-3--vocable {
-    grid-column-start: 1;
-    grid-row-start: 3;
-  }
-
-  #box-4--waterpik {
-    grid-column-start: 1;
-    grid-row-start: 4;
-  }
-
-  #box-5--natgeo {
-    grid-column-start: 1;
-    grid-row-start: 5;
-  }
-
+  /* Button styles */
   .btn {
     width: 100%;
     padding: var(--spacing-lg) 0;
@@ -483,6 +472,7 @@ a:visited {
     background-color: var(--color-yellow-transparent-hover);
   }
 
+  /* Typography adjustments */
   p {
     font-size: var(--font-size--small);
     line-height: 1.4em;
@@ -505,9 +495,10 @@ a:visited {
     margin-top: var(--spacing-lg);
   }
 
+  /* Sticker adjustments */
   #sticker {
     width: 160px;
-    height: 92.43px; /* scaling is 1.731 */
+    height: 92.43px;
     top: 16px;
     right: 32px;
     -webkit-clip-path: path(
@@ -530,6 +521,7 @@ a:visited {
   }
 }
 
+/* Touch device optimizations */
 @media (hover: none) {
   #sticker-container:hover {
     transform: scale(1, 1) rotate(16deg);

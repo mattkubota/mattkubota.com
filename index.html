@@ -76,7 +76,12 @@
 
   <!-- Content -->
   <body>
-    <div id="toast-container" aria-live="polite"></div>
+    <div
+      id="toast-container"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
     <main>
       <section id="box-1">
         <header>
@@ -92,10 +97,14 @@
             alt="Matt Kubota speaking at a conference"
           />
           <div id="sticker-container">
-            <a id="sticker" href="#" class="email-copy">
-              <img src="assets/images/sticker.svg" alt="Let's talk!" />
+            <button
+              id="sticker"
+              class="email-copy"
+              aria-label="Copy email address to clipboard"
+            >
+              <img src="assets/images/sticker.svg" alt="" />
               <div id="shine"></div>
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -118,7 +127,12 @@
         <p id="contact">
           I'd love to connect and chat about design. Email me any time at
           <span class="email-container">
-            <button class="email-copy">matthewkubota(at)gmail(dot)com</button>
+            <button
+              class="email-copy"
+              aria-label="Copy email address matthewkubota@gmail.com to clipboard"
+            >
+              matthewkubota(at)gmail(dot)com
+            </button>
             <svg
               class="copy-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -130,6 +144,8 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
             >
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
               <path
@@ -246,16 +262,25 @@
     <!-- Scripts -->
     <script>
       // Utility functions
-      const showToast = () => {
+      const showToast = (isError = false) => {
         const toastContainer = document.getElementById("toast-container");
         const toast = document.createElement("div");
-        toast.className = "toast";
+        toast.className = isError ? "toast toast-error" : "toast";
+        toast.setAttribute("role", "alert");
         toast.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-          Email copied
-        `;
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      ${
+        isError
+          ? '<circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line>'
+          : '<polyline points="20 6 9 17 4 12"></polyline>'
+      }
+    </svg>
+    <span>${
+      isError
+        ? "Failed to copy email address"
+        : "Email address copied"
+    }</span>
+  `;
         toastContainer.appendChild(toast);
         setTimeout(() => toast.remove(), 2000);
       };
@@ -269,6 +294,7 @@
             showToast();
           } catch (err) {
             console.error("Failed to copy:", err);
+            showToast(true);
           }
         });
       });

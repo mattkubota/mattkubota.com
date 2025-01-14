@@ -76,6 +76,7 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <div id="toast-container" aria-live="polite"></div>
     <main>
       <section id="box-1">
         <header>
@@ -91,7 +92,7 @@
             alt="Matt Kubota speaking at a conference"
           />
           <div id="sticker-container">
-            <a id="sticker" href="mailto:matthewkubota@gmail.com">
+            <a id="sticker" href="#" class="email-copy">
               <img src="assets/images/sticker.svg" alt="Let's talk!" />
               <div id="shine"></div>
             </a>
@@ -116,8 +117,13 @@
         </p>
         <p id="contact">
           I'd love to connect and chat about design. Email me any time at
-          <a href="mailto:matthewkubota@gmail.com">matthewkubota@gmail.com</a>.
-          Otherwise, find me on Twitter
+          <span class="email-container">
+            <button class="email-copy">matthewkubota(at)gmail(dot)com</button>
+            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </span>. Otherwise, find me on X
           <a
             href="https://x.com/mattkubota"
             aria-label="Follow Matt Kubota on X"
@@ -223,6 +229,62 @@
         >
       </section>
     </main>
+
+    <script>
+      function showToast() {
+        const toastContainer = document.getElementById("toast-container");
+        const toast = document.createElement("div");
+        toast.className = "toast";
+        toast.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Email copied
+        `;
+
+        toastContainer.appendChild(toast);
+
+        // Remove the toast after animation completes
+        setTimeout(() => {
+          toast.remove();
+        }, 2000);
+      }
+
+      document.querySelectorAll(".email-copy").forEach((button) => {
+        button.addEventListener("click", async (e) => {
+          e.preventDefault();
+          const email = "matthewkubota@gmail.com";
+
+          try {
+            await navigator.clipboard.writeText(email);
+            showToast();
+          } catch (err) {
+            console.error("Failed to copy:", err);
+          }
+        });
+      });
+    </script>
+
+    <script>
+      // Intersection Observer for fade-in animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      // Observe all project images
+      document.querySelectorAll(".project img").forEach((img) => {
+        observer.observe(img);
+      });
+    </script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">

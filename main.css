@@ -219,6 +219,9 @@ button:focus-visible {
   transition: all 0.2s;
   filter: drop-shadow(0 0 0 var(--color-shadow));
   will-change: transform, filter;
+  @media (min-width: 2028px) {
+    left: 825px;
+  }
 }
 
 #sticker {
@@ -310,6 +313,7 @@ button:focus-visible {
   max-width: 1200px;
   height: 100%;
   position: relative;
+  /* margin: 0 auto; */
 }
 
 #hero {
